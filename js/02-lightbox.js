@@ -23,21 +23,6 @@ function createMarkup(arr) {
 
 gallery.insertAdjacentHTML("beforeend", createMarkup(galleryItems));
 
-// gallery.addEventListener("click", handlerClickImg);
-
-// function handlerClickImg(evt) {
-//   if (evt.target === evt.currentTarget) {
-//     return;
-//   }
-//   evt.preventDefault();
-
-//   const lightbox = new SimpleLightbox(".gallery a", {
-//     captionsData: "alt",
-//     captionDelay: 250,
-//     docClose: true,
-//   });
-// }
-
 const lightbox = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
   captionDelay: 250,

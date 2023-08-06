@@ -34,11 +34,9 @@ function handlerClickImg(evt) {
   // Заборони цю поведінку за замовчуванням.
   evt.preventDefault();
 
-  const { source } = evt.target.dataset;
-  const image = galleryItems.find(({ original }) => original === source);
   // 4.Відкриття модального вікна по кліку на елементі галереї. Для цього ознайомся з документацією і прикладами.
   const instance = basicLightbox.create(`
-	<img src="${image.original}" alt="${image.description}" />
+	<img src="${evt.target.dataset.source}" alt="${evt.target.alt}" />
 `);
   instance.show();
   // 6. Закриття модального вікна клавішою Ескейп
